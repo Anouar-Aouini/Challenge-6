@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h2 >List of actors :</h2>
+    <div class="col-sm-4 mt-2" *ngFor="let actor of actors;let i=index">
+    <app-actor
+     [firstName]="actor.firstName"
+     [lastName]="actor.lastName" [ind]="i"
+    (deleteEvent)="deleteActor($event)"
+    (favoriteEvent)="OnFavoriteActor($event)"
+     ></app-actor>
+  </div>
+</div>
+<h3 class="mt-3" *ngIf="favoriteActors.length>0">Favorite list :</h3>
+  <div class="col-2" *ngFor="let actor of favoriteActors;let i=index">
+        <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">First name : {{actor.firstName}}</h5>
+        <p class="card-text">Last name : {{actor.lastName}}</p>
+      </div>
+    </div>
+  </div>
+</div>

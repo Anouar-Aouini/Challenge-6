@@ -1,0 +1,8 @@
+<div class="container">
+<h2>Parent Component</h2>
+<h4>Count from parent component :{{count}}</h4>
+
+<button class="btn btn-success" (click)="showCount()">Click</button>
+<app-convertisseur-child [countToChild]="count"></app-convertisseur-child>
+</div>
+
