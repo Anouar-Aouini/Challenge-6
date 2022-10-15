@@ -16,7 +16,6 @@ export class ConvertisseurParentComponent implements OnInit {
   @ViewChild(ConvertisseurChildComponent, {static: false}) child?: ConvertisseurChildComponent;
 
   showCount() {
-    console.log(this.child?.childCount)
     this.count=this.child?.childCount
   }
 
